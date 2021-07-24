@@ -9,16 +9,16 @@ services:
       - ./gateway/nginx/conf.d:/etc/nginx/conf.d
       - /home/azureuser/assets:/var/www/assets
 
-  pgadmin4:
-    image: dpage/pgadmin4
-    container_name: lde.pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: user@domain.com
-      PGADMIN_DEFAULT_PASSWORD: postgres
-    depends_on:
-      - postgres
-    ports:
-      - 8001:80    
+#  pgadmin4:
+#    image: dpage/pgadmin4
+#    container_name: lde.pgadmin4
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: user@domain.com
+#      PGADMIN_DEFAULT_PASSWORD: postgres
+#    depends_on:
+#      - postgres
+#    ports:
+#      - 8001:80    
 
   postgres:
     image: postgres:13.3
